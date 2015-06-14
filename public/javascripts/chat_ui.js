@@ -63,6 +63,13 @@ $(document).ready(function(){
   });
   $('#send-message').focus();
 
+  $('#send-message').keydown(function(event) {
+    if (event.keyCode === 13) {
+      processUserInput(chatApp, socket);
+      return false;
+    }
+  });
+
   $('#send-button').click(function() {
     processUserInput(chatApp, socket);
     return false;
