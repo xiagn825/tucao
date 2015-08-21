@@ -1,0 +1,324 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+body {
+	font-size: 100%;
+	font-size: 16px;
+	font-size: 1em;
+    background-color: #fff;
+    background-image: linear-gradient(#f3f3f3 2px, transparent 2px), 
+					linear-gradient(0, #f3f3f3 2px, transparent 2px), 
+					linear-gradient(hsla(0,92%,0%,.03) 1px, transparent 1px), 
+					linear-gradient(0, hsla(0,92%,0%,.03) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    -moz-box-shadow:inset 0 0 30px #000000;
+    -webkit-box-shadow:inset 0 0 30px #000000;
+    box-shadow:inset 0 0 30px #000000;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+@-webkit-keyframes swing {
+  from {
+    transform: rotate(3deg);
+  }
+  20% {
+	transform: rotate(7deg);
+	}
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(7deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../../../fonts/OpenSans-Semibold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (min-width: 1001px) and (max-width: 1080px) {
+   nav ul li a { font-size: 1.4em; }
+}
+@media screen and (min-width: 805px) and (max-width: 1000px) {
+   nav ul li a { font-size: 1.25em; }
+}
+@media screen and (min-width: 769px) and (max-width: 804px) {
+   nav ul li a { font-size: 1.1em; }
+}
+#wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  width: 96%;
+  background-color: hsla(0, 0%, 100%, 0.61);
+}
+header {
+  background-position: 0 top;
+  background-repeat: repeat-x;
+  background-image: url(../../../img/buntingFW.png);
+  margin-right: auto;
+  margin-left: auto;
+  width: 97.9166667%; /* 940 ÷ 960 */
+}
+#logo {
+	display: block;
+    padding-top: 75px;
+    color: #0d0c0c;
+    text-transform: uppercase;
+    font-family: 'BebasNeueRegular';
+    font-size: 3em;
+    text-shadow: 4px 4px 1px hsla(140, 3%, 26%, 0.4);
+}
+nav {
+  display: table;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  padding-right: 1.0416667%; /* 10 ÷ 960 */
+  padding-left: 1.0416667%; /* 10 ÷ 960 */
+  width: 97.9166667%; /* 940 ÷ 960 */
+  /*background-repeat: repeat-x;*/
+  /*background-image: url(../../../img/atwiNavBg.png);*/
+  border-bottom-color: #bfbfbf;
+  border-bottom-style: double; border-bottom-width: 4px
+}
+nav ul {
+	display: inline-table;
+	width:100%
+}
+
+nav ul li {
+	text-align: center;
+	display: table-cell;
+}
+
+nav ul li:last-child {
+  text-align: right;
+}
+nav ul li:first-child {
+  text-align: left;
+}
+
+nav ul li:nth-child(n+3) a {
+	color: #fe0208;
+}
+
+nav ul li a {
+  height: 42px;
+  line-height: 42px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 27px;
+  font-family: 'BebasNeueRegular';
+  font-size: 1.875em; /*30 ÷ 16 */
+  color: #000000;
+￼￼text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.75);
+}
+aside {
+  float: left;
+  border-right-color: 2px solid #e8e8e8;
+  margin-top: 28px;
+  padding-left: 1.5%;
+  padding-right: 1.0416667%;
+  margin-left: 1.0416667%;
+  width: 20.7083333%;
+  background: linear-gradient(90deg, #fff 0%, #e4e4e4 48.7%, #fff 100%);
+}
+.sideBlock {
+	width: 100%;
+}
+.sideBlock a {
+    max-width: 47%;
+    text-decoration: none;
+    float: left;
+}
+.sideBlock img {
+    box-shadow: 0px 3px 5px #444;
+    margin-bottom: 5px;
+}
+.unSung a:nth-child(odd) img {
+	margin-right:2%;
+    transform: rotate(3deg);
+    animation: swing 0.1s 5 ease-in;
+￼}
+.unSung a:nth-child(even) img {
+    transform: rotate(-3deg);
+    animation: swing 0.1s 5 0.3s ease-in;
+}
+.overHyped a:nth-child(odd) img {
+    transform: rotate(3deg);
+    animation: swing 0.1s 5 0.2s ease-in;
+}
+.overHyped a:nth-child(even) img {
+    transform: rotate(-3deg);
+    animation: swing 0.1s 5 0.5s ease-in;
+}
+.moreInfo {
+    padding: 5px 0px 5px 0px;
+    color: #5c5959;
+    text-shadow: 0px 1px 0px #fff;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #999;
+    background: linear-gradient(top, hsla(0,0%,1%,0.11) 0%,hsla(0,0%,10%,0.11) 12%,hsla(0,0%,22%,0.11) 24%,hsla(0,0%,38%,0.11) 39%,hsla(0,0%,62%,0.11) 59%,hsla(0,0%,84%,0.11) 78%,hsla(0,0%,94%,0.11) 90%,hsla(0,0%,100%,0.11) 100%);
+    transition: all 0.7s;
+}
+aside h1 {
+    margin-bottom: 20px;
+    font-family: 'BebasNeueRegular';
+    font-size: 1em;
+    text-transform: uppercase;
+}
+#content {
+  float: right;
+  margin-top: 28px;
+  margin-right: 1.0416667%;
+  width: 72.7083333%; /* 698 ÷ 960 */
+  background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(red, green, blue); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(red, green, blue); /* Standard syntax */
+  background: -webkit-radial-gradient(20px 20px, circle cover,
+                            hsla(9,69%,85%,0.5) 0%,
+                            hsla(9,76%,63%,1) 50%,
+                            hsla(10,98%,46%,1) 51%,
+                            hsla(24,100%,50%,1) 75%,
+                            hsla(10,100%,39%,1) 100%);
+}
+.oscarMain {
+    float: left;
+    width: 28.9398281%;
+    max-width: 202px;
+    margin-right: 1%;
+}
+#content h1 {
+	text-transform: uppercase;
+    font-family: 'BebasNeueRegular';
+    font-size: 6.375em;
+    text-shadow: 0px 1px white,4px 4px 0px #dad7d7;
+    font-weight: 400;
+
+}
+#content h1 em {
+    display: block;
+    color: #504e4e;
+    text-shadow: none;
+    font: .352941176em/1.052631579em 'BitstreamVeraSansRoman';
+    font-weight: 400;
+}
+#content p {
+    font-family: 'ColaborateThinRegular';
+    line-height: 40px;
+    color: #757474;
+    font-size: 1.875em;
+}
+#content a {
+    text-decoration: none;
+    font: 2.25em /* 36px ÷ 16 */ 'BebasNeueRegular';
+    background-color: #b01c20;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 3%;
+    float: left;
+    background: linear-gradient(90deg, #b01c20 0%, #f15c60 100%);
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 26.6667%, 0.8);
+    text-shadow: 0px 1px black;
+    border: 1px solid #bfbfbf;
+    -webkit-transition: all 5s ease 0s;
+    transition: all 5s ease 0s;
+}
+
+#content a:hover {
+    border: 1px solid #000000;
+    color: #000000;
+    text-shadow: 0px 1px white;
+}
+
+/*.Qcontainer {
+    height: 100%;
+    width: 28%;
+    position: relative;
+    -webkit-perspective: 800;
+    float: left;
+    margin-right: 2%;
+}
+.film {
+    width: 100%;
+    height: 15em;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 1s;
+}
+.Qcontainer:hover .film {
+    -webkit-transform: rotateY(180deg);
+}
+.face {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+.back {
+	width: 66%;
+    height: 127%;
+    -webkit-transform: rotateY(180deg);
+    background: #3b3b3b;
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0.65) 0%,
+			rgba(0,0,0,0) 100%);
+￼￼￼￼padding: 15%;
+}*/
+
+
+/*#content a.button {
+    text-decoration: none;
+    font: 2.25em 'BebasNeueRegular';
+    background-color: #b01c20;
+    background: linear-gradient(top, rgb(241,92,96) 0%, rgb(176,28,32) 100%);
+    border-radius: 8px;
+    color: white;
+    padding: 3%;	
+    float: left;
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 26.6667%, 0.8);
+    text-shadow: 0px 1px black;
+    border: 1px solid #bfbfbf;
+    transition-property: border, color, text-shadow;
+    transition-duration: 2s, 3s, 8s;
+}*/
+footer {
+    padding-bottom: 43px;
+    margin-top: 20px;
+    padding-top: 33px;
+    background-position: 0 bottom;
+    background-repeat: repeat-x;
+    background-image: url(../img/buntingFWinvert.png);
+    margin-right: 1.0416667%;
+    margin-left: 1.0416667%;
+    clear: both;
+    width: 97.9166667%;
+    border-top: 4px double #bfbfbf;
+}
